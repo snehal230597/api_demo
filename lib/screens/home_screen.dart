@@ -1,8 +1,10 @@
-import 'package:api_demo/screens/screen_five.dart';
-import 'package:api_demo/screens/screen_four.dart';
-import 'package:api_demo/screens/screen_one.dart';
-import 'package:api_demo/screens/screen_three.dart';
-import 'package:api_demo/screens/screen_two.dart';
+import 'package:api_demo/screens/get_api/screen_five.dart';
+import 'package:api_demo/screens/get_api/screen_four.dart';
+import 'package:api_demo/screens/get_api/screen_one.dart';
+import 'package:api_demo/screens/get_api/screen_three.dart';
+import 'package:api_demo/screens/get_api/screen_two.dart';
+import 'package:api_demo/screens/post_api/signup.dart';
+import 'package:api_demo/screens/post_api/upload_image.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -34,9 +36,12 @@ class _HomeScreeState extends State<HomeScreen> {
           child: Center(
             child: Column(
               children: [
-                Text(
-                  '/-------------------------- Get Api --------------------------/',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    '/-------------------------- Get Api --------------------------/',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ),
                 SizedBox(
                   width: 120,
@@ -101,6 +106,39 @@ class _HomeScreeState extends State<HomeScreen> {
                       );
                     },
                     child: Text('Screen five'),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    '/-------------------------- Post Api --------------------------/',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+                SizedBox(
+                  width: 120,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(primary: Colors.green),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignUpScreen()),
+                      );
+                    },
+                    child: Text('Signup api'),
+                  ),
+                ),
+                SizedBox(
+                  width: 120,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(primary: Colors.green),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => UploadImageScreen()),
+                      );
+                    },
+                    child: Text('Upload Image'),
                   ),
                 ),
               ],

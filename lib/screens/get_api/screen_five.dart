@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import '../models/products_model.dart';
+import '../../models/products_model.dart';
 
 /*----------------------------- Very complex json data using Api calling --------------------------------*/
 //nest objects - arrays in nests json objects
